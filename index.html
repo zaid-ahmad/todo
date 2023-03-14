@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="cover visible">
+        <form id="taskForm">
+            <div class="header">
+                <h2>Add a new task</h2>
+                <div class="cross">
+                    <p>&#10060;</p>
+                </div>
+            </div>
+
+            <div class="inputs">
+                <input type="text" placeholder="Get the milk" id="task" name="Task" autocomplete="off" required>
+                <input type="date" id="date" name="Date" required>
+                <select name="Category" id="cat" required>
+                    <option value="default">Select Category</option>
+                    <option value="create-new">Create New</option> <!--If this option, input type text visible-->
+                </select>
+                <input type="text" class="cat" placeholder="Create new category. Ex. School" name="newCat"
+                    autocomplete="off">
+            </div>
+
+            <!-- Make this a radio button -->
+            <div class="select-tag">
+                <p class="add-tag tag">Add tag</p>
+                <div class="urg-tag">
+                    <input type="radio" id="urgent" value="Urgent" name="Tag" required>
+                    <label for="urgent">Urgent</label>
+                </div>
+
+                <div class="imp-tag tag">
+                    <input type="radio" id="important" value="Important" name="Tag">
+                    <label for="important">Important</label>
+                </div>
+
+                <div class="nimp-tag tag">
+                    <input type="radio" id="nimp" value="Not as Important" name="Tag">
+                    <label for="nimp">Not as Important</label>
+                </div>
+            </div>
+
+            <button>Add task</button>
+        </form>
+    </div>
+    <div class="container">
+        <section id="side-bar">
+            <div class="inbox">
+                <h2>Inbox</h2>
+                <ul id="sidebar_tasks">
+                    <!-- <li>
+                        <p>Revise computer Fundamentals</p>
+                        <span>(due date: 24/06/23)</span>
+                    </li> -->
+                </ul>
+            </div>
+            <p id="first">Your Projects will Appear Here</p>
+
+        </section>
+
+        <section id="main-page">
+            <h2>Inbox</h2>
+
+            <div class="addBtn">
+                <p>Add new task</p>
+            </div>
+
+            <div class="tasks">
+                <ul id="taskslist">
+                    <!-- <li>
+                        <label class="main">
+                            Revise computer fundamentals
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <div class="info">
+                                <p>(due date: 24/06/23)</p>
+                                <div class="tag">
+                                    <p>Important</p>
+                                </div>
+                            </div>
+                        </label>
+                    </li> -->
+                </ul>
+
+            </div>
+        </section>
+    </div>
+
+    <script src="script-DOM.js" type="module"></script>
+    <script src="script.js" type="module"></script>
+</body>
+
+</html>
+
+<!--
+    TODO
+    1. Display all tasks from the list.
+
+
+-->
